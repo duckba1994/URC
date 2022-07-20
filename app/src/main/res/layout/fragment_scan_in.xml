@@ -1,378 +1,422 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="horizontal"
     tools:context=".ui.scanin.ScanInFragment">
 
-    <TableLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <TableRow
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:theme="@style/label_head_tital"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:text="SCAN IN"
-                    android:textAlignment="center"/>
-            </TableRow>
+                android:gravity="center"
+                android:text="SCAN IN"
+                android:textAlignment="center"
+                android:theme="@style/label_head_tital" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <TableRow
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="60dp"
                 android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:gravity="right|center_vertical"
+                android:text="RFID : "
+                android:theme="@style/label_content" />
 
-                <TextView
-                    android:theme="@style/label_content"
-                    android:layout_width="180dp"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:text="RFID : "
-                    android:layout_weight="1" />
+            <EditText
+                android:id="@+id/txt_rfid"
+                android:layout_width="169dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_taxt_readonly_shape"
+                android:enabled="false"
+                android:inputType="textPersonName"
+                android:text="" />
 
-                <EditText
-                    android:background="@drawable/edit_taxt_readonly_shape"
-                    android:enabled="false"
-                    android:id="@+id/txt_rfid"
-                    android:layout_width="169dp"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-                    android:text="" />
+            <Button
+                android:id="@+id/btn_search_rfid"
+                style="@style/AppTheme.btn_search"
+                android:layout_width="48dp"
+                android:layout_height="40dp"
+                android:text="..." />
 
-                <Button
-                    android:id="@+id/btn_search_rfid"
-                    style="@style/AppTheme.btn_search"
-                    android:layout_width="48dp"
-                    android:layout_height="40dp"
-                    android:text="..." />
-<!--                    android:textColor="@color/black"-->
-<!--                    android:textColorLink="@color/black" -->
+            <CheckBox
+                android:id="@+id/chk_rfid"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="" />
 
-
-
-                <CheckBox
-                    android:id="@+id/chk_rfid"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="" />
-
-                <TextView
-                    android:theme="@style/label_content"
-                    android:layout_width="70dp"
-                    android:layout_height="wrap_content"
-                    android:text="LOT." />
-            </TableRow>
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="LOT."
+                android:theme="@style/label_content" />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_marginTop="1dp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="5dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
 
                 <TextView
-                    android:layout_width="135dp"
+                    android:layout_width="60dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
+                    android:gravity="right|center_vertical"
                     android:text="B/C.NO : "
                     android:theme="@style/label_content" />
+            </LinearLayout>
 
-                <EditText
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-                    android:id="@+id/txt_bc_ref1"
-                    android:background="@drawable/edit_text_shape"
-                    android:layout_width="165dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="1dp"
-                    android:inputType="textPersonName"
-                    android:text="" />
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
 
                     <EditText
-                        android:layout_marginLeft="1dp"
-                        android:background="@drawable/edit_text_shape"
-                        android:id="@+id/txt_bc_ref2"
-                        android:layout_width="169dp"
+                        android:id="@+id/txt_bc_ref1"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginRight="1dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/edit_text_shape"
                         android:inputType="textPersonName"
                         android:text="" />
 
+                    <EditText
+                        android:id="@+id/txt_bc_ref2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="1dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/edit_text_shape"
+                        android:inputType="textPersonName"
+                        android:text="" />
+                </TableRow>
 
-            </TableRow>
+            </LinearLayout>
+
+
         </LinearLayout>
 
         <LinearLayout
-            android:layout_marginTop="1dp"
-
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-            <TableRow
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:gravity="right|center_vertical"
+                android:text="Product : "
+                android:theme="@style/label_content" />
+
+            <EditText
+                android:id="@+id/txt_product_ref1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:background="@drawable/edit_taxt_readonly_shape"
+                android:enabled="false"
+                android:inputType="textPersonName"
+                android:text="" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:gravity="right|center_vertical"
+                android:text="" />
+
+            <EditText
+                android:id="@+id/txt_product_ref2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_shape"
+                android:inputType="textPersonName"
+                android:text="" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="5dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="right|center_vertical"
+                    android:text="FROM : "
+                    android:theme="@style/label_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+
+                    <EditText
+                        android:id="@+id/txt_from_ref1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="1dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/edit_taxt_readonly_shape"
+                        android:enabled="false"
+                        android:inputType="textPersonName"
+                        android:text="" />
+
+                    <EditText
+                        android:id="@+id/txt_from_ref2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="1dp"
+                        android:layout_weight="2"
+                        android:background="@drawable/edit_text_shape"
+                        android:inputType="textPersonName"
+                        android:text="" />
+                </TableRow>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="5dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="right|center_vertical"
+                    android:text="RACK : "
+                    android:theme="@style/label_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+                    <EditText
+                        android:id="@+id/txt_rack"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edit_taxt_readonly_shape"
+                        android:enabled="false"
+                        android:inputType="textPersonName"
+                        android:text="" />
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="LOC : "
+                        android:textAlignment="center"
+                        android:theme="@style/label_content" />
+                    <EditText
+                        android:id="@+id/txt_loc"
+                        android:layout_width="66dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edit_text_shape"
+                        android:inputType="textPersonName"
+                        android:text="" />
+                    <Button
+                        android:id="@+id/btn_clear"
+                        style="@style/AppTheme.btn_search"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:text="Clear"
+                        android:textSize="11dp" />
+                </TableRow>
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="5dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <TextView
+                    android:theme="@style/label_content"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="right|center_vertical"
+                    android:text="DOC No : " />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+                    <EditText
+                        android:layout_weight="1"
+                        android:id="@+id/txt_doc_no"
+                        android:background="@drawable/edit_text_shape"
+                        android:layout_width="235dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:text="" />
+                    <Button
+                        android:layout_weight="2"
+                        style="@style/AppTheme.btn_search"
+                        android:id="@+id/btn_search_doc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:text="..." />
+                </TableRow>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="5dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
 
                 <TextView
                     android:theme="@style/label_content"
-                    android:layout_width="73dp"
+                    android:layout_width="60dp"
                     android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:text="Product : "
+                    android:layout_alignParentLeft="true"
+                    android:gravity="right|center_vertical"
+                    android:text="Product : " />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+                    <EditText
+                        android:id="@+id/txt_product_name"
+                        android:background="@drawable/edit_text_shape"
+                        android:layout_width="235dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:text="" />
+                    <Button
+                        android:layout_weight="2"
+                        style="@style/AppTheme.btn_search"
+                        android:id="@+id/btn_search_product"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:text="..." />
+                </TableRow>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="5dp">
+            <TextView
+                android:theme="@style/label_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Update QTY"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingTop="5dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <TextView
+                    android:theme="@style/label_content"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="right|center_vertical"
+                    android:text="QTY = "
                      />
 
-
-                <EditText
-                    android:background="@drawable/edit_taxt_readonly_shape"
-                    android:enabled="false"
-                    android:id="@+id/txt_product_ref1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-                    android:text="" />
-
-            </TableRow>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="73dp"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:text=""
-                    android:textAlignment="center" />
-
-                <EditText
-                    android:background="@drawable/edit_text_shape"
-                    android:id="@+id/txt_product_ref2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-                    android:text="" />
-            </TableRow>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-                <TextView
-                    android:theme="@style/label_content"
-                    android:layout_width="73dp"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:text="FROM : "
-                    android:textAlignment="center" />
-
-                <EditText
-                    android:background="@drawable/edit_taxt_readonly_shape"
-                    android:enabled="false"
-                    android:id="@+id/txt_from_ref1"
-                    android:layout_width="235dp"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-                    android:text="" />
-
-                <EditText
-                    android:background="@drawable/edit_text_shape"
-                    android:id="@+id/txt_from_ref2"
-                    android:layout_width="102dp"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-                    android:text="" />
-            </TableRow>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-                <TextView
-                    android:theme="@style/label_content"
-                    android:layout_width="73dp"
-                    android:layout_height="40dp"
-                    android:gravity="center"
-                    android:text="RACK : "
-                    android:textAlignment="center" />
-
-                <EditText
-                    android:background="@drawable/edit_taxt_readonly_shape"
-                    android:enabled="false"
-                    android:id="@+id/txt_rack"
-                    android:layout_width="120dp"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-                    android:text="" />
-
-                <TextView
-                    android:theme="@style/label_content"
-                    android:layout_width="50dp"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:text="LOC : "
-                    android:textAlignment="center" />
-
-                <EditText
-                    android:id="@+id/txt_loc"
-                    android:background="@drawable/edit_text_shape"
-                    android:layout_width="66dp"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-                    android:text="" />
-
-                <Button
-                    style="@style/AppTheme.btn_search"
-                    android:id="@+id/btn_clear"
-                    android:textSize="11dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_gravity="center"
-                    android:text="Clear" />
-            </TableRow>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-                <TextView
-                    android:theme="@style/label_content"
-                    android:layout_width="73dp"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:text="DOC No : "
-                    android:textAlignment="center" />
-
-                <EditText
-                    android:id="@+id/txt_doc_no"
-                    android:background="@drawable/edit_text_shape"
-                    android:layout_width="235dp"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-                    android:text="" />
-                <Button
-                    style="@style/AppTheme.btn_search"
-                    android:id="@+id/btn_search_doc"
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:text="..." />
-            </TableRow>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-                <TextView
-                    android:theme="@style/label_content"
-                    android:layout_width="73dp"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:text="Product : "
-                    android:textAlignment="center" />
-
-                <EditText
-                    android:id="@+id/txt_product_name"
-                    android:background="@drawable/edit_text_shape"
-                    android:layout_width="235dp"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-                    android:text="" />
-                <Button
-                    style="@style/AppTheme.btn_search"
-                    android:id="@+id/btn_search_product"
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:text="..." />
-            </TableRow>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-                <TextView
-                    android:theme="@style/label_content"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:text="Update QTY"
-                    android:textAlignment="center" />
-            </TableRow>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-                <TextView
-                    android:theme="@style/label_content"
-                    android:layout_width="50dp"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:text="QTY = "
-                    android:textAlignment="center" />
                 <TextView
                     android:id="@+id/txt_qty_total"
                     android:layout_width="50dp"
                     android:layout_height="match_parent"
                     android:gravity="center"
-                    android:text=""
+                    android:textColor="#000000"
+                    android:text="0"
                     android:textAlignment="center" />
                 <TextView
                     android:theme="@style/label_content"
@@ -394,18 +438,20 @@
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
                     android:text="EDIT" />
-            </TableRow>
+            </LinearLayout>
         </LinearLayout>
+
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-            <TableRow
-                android:gravity="center"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingTop="5dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
                 <Button
                     style="@style/AppTheme.btn_insert"
                     android:id="@+id/btn_new"
@@ -424,9 +470,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="RETRUN" />
-            </TableRow>
+            </LinearLayout>
         </LinearLayout>
 
-    </TableLayout>
+    </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

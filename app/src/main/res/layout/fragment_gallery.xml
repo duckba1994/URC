@@ -4,19 +4,429 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.gallery.GalleryFragment">
+    tools:context=".ui.scanin.ScanInFragment">
 
-    <TextView
-        android:id="@+id/text_gallery"
+    <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:theme="@style/label_head_tital"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="SCAN IN"
+                    android:textAlignment="center"/>
+            </TableRow>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:theme="@style/label_content"
+                    android:layout_width="180dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="RFID : "
+                    android:layout_weight="1" />
+
+                <EditText
+                    android:background="@drawable/edit_taxt_readonly_shape"
+                    android:enabled="false"
+                    android:id="@+id/txt_rfid"
+                    android:layout_width="169dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:text="" />
+
+                <Button
+                    android:id="@+id/btn_search_rfid"
+                    style="@style/AppTheme.btn_search"
+                    android:layout_width="48dp"
+                    android:layout_height="40dp"
+                    android:text="..." />
+                <!--                    android:textColor="@color/black"-->
+                <!--                    android:textColorLink="@color/black" -->
+
+
+
+                <CheckBox
+                    android:id="@+id/chk_rfid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="" />
+
+                <TextView
+                    android:theme="@style/label_content"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:text="LOT." />
+            </TableRow>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="135dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="B/C.NO : "
+                    android:theme="@style/label_content" />
+
+                <EditText
+
+                    android:id="@+id/txt_bc_ref1"
+                    android:background="@drawable/edit_text_shape"
+                    android:layout_width="165dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="1dp"
+                    android:inputType="textPersonName"
+                    android:text="" />
+
+                <EditText
+                    android:layout_marginLeft="1dp"
+                    android:background="@drawable/edit_text_shape"
+                    android:id="@+id/txt_bc_ref2"
+                    android:layout_width="169dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:text="" />
+
+
+            </TableRow>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="1dp"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:theme="@style/label_content"
+                    android:layout_width="73dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Product : "
+                    />
+
+
+                <EditText
+                    android:background="@drawable/edit_taxt_readonly_shape"
+                    android:enabled="false"
+                    android:id="@+id/txt_product_ref1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:text="" />
+
+            </TableRow>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="73dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAlignment="center" />
+
+                <EditText
+                    android:background="@drawable/edit_text_shape"
+                    android:id="@+id/txt_product_ref2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:text="" />
+            </TableRow>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <TextView
+                    android:theme="@style/label_content"
+                    android:layout_width="73dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="FROM : "
+                    android:textAlignment="center" />
+
+                <EditText
+                    android:background="@drawable/edit_taxt_readonly_shape"
+                    android:enabled="false"
+                    android:id="@+id/txt_from_ref1"
+                    android:layout_width="235dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:text="" />
+
+                <EditText
+                    android:background="@drawable/edit_text_shape"
+                    android:id="@+id/txt_from_ref2"
+                    android:layout_width="102dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:text="" />
+            </TableRow>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <TextView
+                    android:theme="@style/label_content"
+                    android:layout_width="73dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:text="RACK : "
+                    android:textAlignment="center" />
+
+                <EditText
+                    android:background="@drawable/edit_taxt_readonly_shape"
+                    android:enabled="false"
+                    android:id="@+id/txt_rack"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:text="" />
+
+                <TextView
+                    android:theme="@style/label_content"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="LOC : "
+                    android:textAlignment="center" />
+
+                <EditText
+                    android:id="@+id/txt_loc"
+                    android:background="@drawable/edit_text_shape"
+                    android:layout_width="66dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:text="" />
+
+                <Button
+                    style="@style/AppTheme.btn_search"
+                    android:id="@+id/btn_clear"
+                    android:textSize="11dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:text="Clear" />
+            </TableRow>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <TextView
+                    android:theme="@style/label_content"
+                    android:layout_width="73dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="DOC No : "
+                    android:textAlignment="center" />
+
+                <EditText
+                    android:id="@+id/txt_doc_no"
+                    android:background="@drawable/edit_text_shape"
+                    android:layout_width="235dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:text="" />
+                <Button
+                    style="@style/AppTheme.btn_search"
+                    android:id="@+id/btn_search_doc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="..." />
+            </TableRow>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <TextView
+                    android:theme="@style/label_content"
+                    android:layout_width="73dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Product : "
+                    android:textAlignment="center" />
+
+                <EditText
+                    android:id="@+id/txt_product_name"
+                    android:background="@drawable/edit_text_shape"
+                    android:layout_width="235dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:text="" />
+                <Button
+                    style="@style/AppTheme.btn_search"
+                    android:id="@+id/btn_search_product"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="..." />
+            </TableRow>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <TextView
+                    android:theme="@style/label_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Update QTY"
+                    android:textAlignment="center" />
+            </TableRow>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <TextView
+                    android:theme="@style/label_content"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="QTY = "
+                    android:textAlignment="center" />
+                <TextView
+                    android:id="@+id/txt_qty_total"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAlignment="center" />
+                <TextView
+                    android:theme="@style/label_content"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="NEW = "
+                    android:textAlignment="center" />
+                <EditText
+                    android:background="@drawable/edit_taxt_readonly_shape"
+                    android:id="@+id/txt_qty_total_new"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:text="" />
+                <Button
+                    style="@style/AppTheme.btn_update"
+                    android:id="@+id/btn_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="EDIT" />
+            </TableRow>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <TableRow
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <Button
+                    style="@style/AppTheme.btn_insert"
+                    android:id="@+id/btn_new"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NEW" />
+                <Button
+                    style="@style/AppTheme.btn_update"
+                    android:id="@+id/btn_update"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="UPDATE" />
+                <Button
+                    style="@style/AppTheme.btn_retrun"
+                    android:id="@+id/btn_retrun"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RETRUN" />
+            </TableRow>
+        </LinearLayout>
+
+    </TableLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
