@@ -1,6 +1,499 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".ui.receipt_other.Receipt_OtherFragment">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Scan Other"
+                android:textAlignment="center"
+                android:theme="@style/label_head_tital" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="5dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:gravity="right|center_vertical"
+                    android:text="M/O.No : "
+                    android:theme="@style/label_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <EditText
+                        android:id="@+id/txt_MO_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="1dp"
+                        android:layout_weight="2"
+                        android:background="@drawable/edit_text_shape"
+                        android:inputType="textPersonName"
+                        android:text="" />
+
+                    <Button
+                        android:id="@+id/btn_search_product"
+                        style="@style/AppTheme.btn_search"
+                        android:layout_width="110dp"
+                        android:layout_height="40dp"
+                        android:text="New M/O."
+                        android:textSize="10sp" />
+                </TableRow>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:gravity="right|center_vertical"
+                android:text="Bar Code : "
+                android:theme="@style/label_content" />
+
+            <EditText
+                android:id="@+id/txt_barcode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_taxt_readonly_shape"
+                android:enabled="false"
+                android:inputType="textPersonName"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="5dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:gravity="right|center_vertical"
+                    android:text="Lot No : "
+                    android:theme="@style/label_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3">
+
+                    <EditText
+                        android:id="@+id/txt_lot_no1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="1dp"
+                        android:layout_weight="3"
+                        android:background="@drawable/edit_text_shape"
+                        android:inputType="textPersonName"
+                        android:text="" />
+
+
+                </TableRow>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="5dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:gravity="right|center_vertical"
+                    android:text="To Rack : "
+                    android:textSize="11dp"
+                    android:theme="@style/label_content" />
+
+                <EditText
+                    android:id="@+id/txt_to_rack"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_taxt_readonly_shape"
+                    android:enabled="false"
+                    android:inputType="textPersonName"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="To Loc : "
+                        android:textAlignment="center"
+                        android:theme="@style/label_content" />
+
+                    <EditText
+                        android:id="@+id/txt_to_loc"
+                        android:layout_width="66dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edit_text_shape"
+                        android:inputType="textPersonName"
+                        android:text="" />
+
+                    <Button
+                        android:id="@+id/btn_clear"
+                        style="@style/AppTheme.btn_update"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="clear" />
+
+                </TableRow>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:gravity="right|center_vertical"
+                android:text="R/M No : "
+                android:theme="@style/label_content" />
+
+            <Spinner
+                android:id="@+id/spn_RM_no"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </Spinner>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="5dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:gravity="right|center_vertical"
+                    android:text="Date : "
+                    android:textSize="11dp"
+                    android:theme="@style/label_content" />
+
+                <EditText
+                    android:id="@+id/txt_date"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_taxt_readonly_shape"
+                    android:enabled="false"
+                    android:inputType="textPersonName"
+                    android:text="" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="5dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:gravity="right|center_vertical"
+                        android:text="Prod : "
+                        android:theme="@style/label_content" />
+
+                    <EditText
+                        android:id="@+id/txt_prod"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="1dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/edit_text_shape"
+                        android:inputType="textPersonName"
+                        android:text="" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:gravity="right|center_vertical"
+                        android:text="Lot No : "
+                        android:theme="@style/label_content" />
+
+                    <EditText
+                        android:id="@+id/txt_lot_no2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="1dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/edit_text_shape"
+                        android:inputType="textPersonName"
+                        android:text="" />
+                </LinearLayout>
+            </TableRow>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:gravity="right|center_vertical"
+                android:text="" />
+
+            <EditText
+                android:id="@+id/txt_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_shape"
+                android:inputType="textPersonName"
+                android:text="" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="5dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.4">
+
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:gravity="right|center_vertical"
+                        android:text="Unit : "
+                        android:theme="@style/label_content" />
+
+                    <EditText
+                        android:id="@+id/txt_unit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="1dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/edit_text_shape"
+                        android:inputType="textPersonName"
+                        android:text="" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:gravity="right|center_vertical"
+                        android:text="Qty : "
+                        android:theme="@style/label_content" />
+
+                    <EditText
+                        android:id="@+id/txt_qty_total"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="1dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/edit_text_shape"
+                        android:inputType="textPersonName"
+                        android:text="" />
+                </LinearLayout>
+            </TableRow>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="5dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4">
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <CheckBox
+                        android:id="@+id/ck_update"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="Update">
+
+                    </CheckBox>
+
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:gravity="right|center_vertical"
+                        android:text="Edit Qty : "
+                        android:theme="@style/label_content" />
+
+                    <EditText
+                        android:id="@+id/txt_qty_total_new"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="1dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/edit_text_shape"
+                        android:inputType="textPersonName"
+                        android:text="" />
+
+                    <Button
+                        android:id="@+id/btn_edit_qty"
+                        style="@style/AppTheme.btn_update"
+                        android:layout_width="70dp"
+                        android:layout_height="40dp"
+                        android:text="EDIT" />
+                </LinearLayout>
+            </TableRow>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="5dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/btn_new"
+                    style="@style/AppTheme.btn_insert"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NEW" />
+
+                <Button
+                    android:id="@+id/btn_update"
+                    style="@style/AppTheme.btn_update"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="UPDATE" />
+
+                <Button
+                    android:id="@+id/btn_retrun"
+                    style="@style/AppTheme.btn_retrun"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RETRUN" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

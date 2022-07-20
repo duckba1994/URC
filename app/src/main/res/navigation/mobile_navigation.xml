@@ -12,9 +12,9 @@
         tools:layout="@layout/fragment_scan_in" />
     <fragment
         android:id="@+id/nav_receipt_other"
-        android:name="com.example.myapplication.ui.gallery.GalleryFragment"
+        android:name="com.example.myapplication.ui.receipt_other.Receipt_OtherFragment"
         android:label="@string/menu_receipt_other"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/fragment_receipt_other" />
 
     <fragment
         android:id="@+id/nav_movement"
