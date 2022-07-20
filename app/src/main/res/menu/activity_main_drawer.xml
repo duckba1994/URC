@@ -4,17 +4,68 @@
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
+
+
         <item
-            android:id="@+id/nav_home"
+            android:id="@+id/nav_scan_in"
             android:icon="@drawable/ic_menu_camera"
-            android:title="@string/menu_home" />
+            android:title="@string/menu_scan_in" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_gallery" />
+            android:id="@+id/nav_receipt_other"
+            android:icon="@drawable/ic_menu_scan_other"
+            android:title="@string/menu_receipt_other" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />
+            android:id="@+id/nav_movement"
+            android:icon="@drawable/ic_menu_movement"
+            android:title="@string/menu_movement" />
+        <item
+            android:id="@+id/nav_check_stock"
+            android:icon="@drawable/ic_menu_check_stock"
+            android:title="@string/menu_check_stock" />
+
+        <item
+            android:id="@+id/nav_check_compare"
+            android:icon="@drawable/ic_menu_compare"
+            android:title="@string/menu_check_compare" />
+        <item
+            android:id="@+id/nav_product_in_rack"
+            android:icon="@drawable/ic_menu_product_in_rack"
+            android:title="@string/menu_Product_In_Rack" />
+        <item
+            android:id="@+id/nav_where_is_product"
+            android:icon="@drawable/ic_menu_where_is_product"
+            android:title="@string/menu_Where_is_Product" />
+<!--        <item-->
+<!--            android:id="@+id/nav_home"-->
+<!--            android:icon="@drawable/ic_menu_camera"-->
+<!--            android:title="@string/menu_scan_in" />-->
+<!--        <item-->
+<!--            android:id="@+id/nav_gallery"-->
+<!--            android:icon="@drawable/ic_menu_gallery"-->
+<!--            android:title="@string/menu_receipt_other" />-->
+<!--        <item-->
+<!--            android:id="@+id/nav_slideshow"-->
+<!--            android:icon="@drawable/ic_menu_slideshow"-->
+<!--            android:title="@string/menu_movement" />-->
+
+<!--        <item-->
+<!--            android:id="@+id/nav_slideshow"-->
+<!--            android:icon="@drawable/ic_menu_slideshow"-->
+<!--            android:title="@string/menu_check_stock" />-->
+
+<!--        <item-->
+<!--            android:id="@+id/nav_slideshow"-->
+<!--            android:icon="@drawable/ic_menu_slideshow"-->
+<!--            android:title="@string/menu_check_compare" />-->
+<!--        <item-->
+<!--            android:id="@+id/nav_slideshow"-->
+<!--            android:icon="@drawable/ic_menu_slideshow"-->
+<!--            android:title="@string/menu_Product_In_Rack" />-->
+<!--        <item-->
+<!--            android:id="@+id/nav_slideshow"-->
+<!--            android:icon="@drawable/ic_menu_slideshow"-->
+<!--            android:title="@string/menu_Where_is_Product" />-->
+
+
     </group>
 </menu>

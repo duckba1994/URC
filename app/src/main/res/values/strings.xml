@@ -7,7 +7,21 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_scan_in">Scan In</string>
+    <string name="menu_receipt_other">Receipt Other</string>
+    <string name="menu_movement">Movement</string>
+    <string name="menu_check_stock">Check Stock</string>
+    <string name="menu_check_compare">Check Compare</string>
+    <string name="menu_Product_In_Rack">Product In Rack</string>
+    <string name="menu_Where_is_Product">Where Is Product</string>
+<!--    <string name="menu_home">Scan In</string>-->
+<!--    <string name="menu_home">Receipt Other</string>-->
+
+<!--    <string name="menu_gallery">Movement</string>-->
+<!--    <string name="menu_slideshow">Check Stock</string>-->
+<!--    <string name="menu_slideshow">Check Compare</string>-->
+<!--    <string name="menu_slideshow">Product In Rack</string>-->
+<!--    <string name="menu_slideshow">Where Is Product</string>-->
+
+
 </resources>

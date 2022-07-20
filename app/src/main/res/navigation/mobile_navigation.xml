@@ -3,23 +3,47 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@+id/nav_scan_in">
 
     <fragment
-        android:id="@+id/nav_home"
-        android:name="com.example.myapplication.ui.home.HomeFragment"
-        android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
-
+        android:id="@+id/nav_scan_in"
+        android:name="com.example.myapplication.ui.scanin.ScanInFragment"
+        android:label="@string/menu_scan_in"
+        tools:layout="@layout/fragment_scan_in" />
     <fragment
-        android:id="@+id/nav_gallery"
+        android:id="@+id/nav_receipt_other"
         android:name="com.example.myapplication.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
+        android:label="@string/menu_receipt_other"
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
+        android:id="@+id/nav_movement"
         android:name="com.example.myapplication.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
+        android:label="@string/menu_movement"
+        tools:layout="@layout/fragment_slideshow" />
+
+
+    <fragment
+        android:id="@+id/nav_check_stock"
+        android:name="com.example.myapplication.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_check_stock"
+        tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/nav_check_compare"
+        android:name="com.example.myapplication.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_check_compare"
+        tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/nav_product_in_rack"
+        android:name="com.example.myapplication.ui.productinrack.ProductInRackFragment"
+        android:label="@string/menu_Product_In_Rack"
+        tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/nav_where_is_product"
+        android:name="com.example.myapplication.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_Where_is_Product"
         tools:layout="@layout/fragment_slideshow" />
 </navigation>

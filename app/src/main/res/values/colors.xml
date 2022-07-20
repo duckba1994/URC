@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+<color name="col_blue_select">#1B4DDF</color>
+    <color name="col_green_insert">#6AEF9C</color>
+    <color name="col_yellow_update">#F6F996</color>
+    <color name="col_red_delete">#CB5254</color>
+    <color name="col_gray_retrun">#EDEDED</color>
+
+    <color name="blue_search">#1B4DDF   </color>
+    <color name="yellow_retrun">#F6F996 </color>
+    <color name="green_insert">#6AEF9C </color>
+    <color name="blue_update">#4E98E1  </color>
+    <color name="red_delete">#CB5254 </color>
+
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
