@@ -6,10 +6,13 @@
         <entry key="..\:/code_android/MyApplication/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/code_android/MyApplication/app/src/main/res/layout/content_main.xml" value="0.25" />
         <entry key="..\:/code_android/MyApplication/app/src/main/res/layout/fragment_gallery.xml" value="0.33" />
+        <entry key="..\:/code_android/MyApplication/app/src/main/res/layout/fragment_home.xml" value="0.19396338446313707" />
         <entry key="..\:/code_android/MyApplication/app/src/main/res/layout/fragment_movement.xml" value="0.3121761658031088" />
         <entry key="..\:/code_android/MyApplication/app/src/main/res/layout/fragment_productinrack.xml" value="0.21041666666666667" />
         <entry key="..\:/code_android/MyApplication/app/src/main/res/layout/fragment_receipt_other.xml" value="0.25" />
         <entry key="..\:/code_android/MyApplication/app/src/main/res/layout/fragment_scan_in.xml" value="0.33" />
+        <entry key="..\:/code_android/MyApplication/app/src/main/res/layout/fragment_slideshow.xml" value="0.12921125644074513" />
+        <entry key="..\:/code_android/MyApplication/app/src/main/res/layout/popup_window.xml" value="0.18" />
         <entry key="..\:/code_android/MyApplication/app/src/main/res/menu/activity_main_drawer.xml" value="0.1" />
         <entry key="..\:/code_android/MyApplication/app/src/main/res/menu/main.xml" value="0.1" />
       </map>
