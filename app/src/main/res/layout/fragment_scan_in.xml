@@ -45,9 +45,9 @@
                 android:layout_width="169dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/edit_taxt_readonly_shape"
-                android:enabled="false"
-                android:inputType="textPersonName"
                 android:text="" />
+
+            <requestFocus />
 
             <Button
                 android:id="@+id/btn_search_rfid"
@@ -103,7 +103,6 @@
                         android:layout_marginRight="1dp"
                         android:layout_weight="1"
                         android:background="@drawable/edit_text_shape"
-                        android:inputType="textPersonName"
                         android:text="" />
 
                     <EditText
@@ -113,7 +112,6 @@
                         android:layout_marginLeft="1dp"
                         android:layout_weight="1"
                         android:background="@drawable/edit_text_shape"
-                        android:inputType="textPersonName"
                         android:text="" />
                 </TableRow>
 
@@ -142,7 +140,6 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/edit_taxt_readonly_shape"
                 android:enabled="false"
-                android:inputType="textPersonName"
                 android:text="" />
         </LinearLayout>
 
@@ -165,7 +162,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/edit_text_shape"
-                android:inputType="textPersonName"
                 android:text="" />
         </LinearLayout>
 
@@ -207,7 +203,6 @@
                         android:layout_weight="1"
                         android:background="@drawable/edit_taxt_readonly_shape"
                         android:enabled="false"
-                        android:inputType="textPersonName"
                         android:text="" />
 
                     <EditText
@@ -217,7 +212,6 @@
                         android:layout_marginLeft="1dp"
                         android:layout_weight="2"
                         android:background="@drawable/edit_text_shape"
-                        android:inputType="textPersonName"
                         android:text="" />
                 </TableRow>
 
@@ -232,9 +226,11 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:paddingTop="5dp">
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent">
+
                 <TextView
                     android:layout_width="60dp"
                     android:layout_height="match_parent"
@@ -247,18 +243,19 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    >
+                    android:layout_height="match_parent">
+
                     <EditText
                         android:id="@+id/txt_rack"
                         android:layout_width="120dp"
                         android:layout_height="wrap_content"
                         android:background="@drawable/edit_taxt_readonly_shape"
                         android:enabled="false"
-                        android:inputType="textPersonName"
                         android:text="" />
+
                     <TextView
                         android:layout_width="50dp"
                         android:layout_height="match_parent"
@@ -266,13 +263,14 @@
                         android:text="LOC : "
                         android:textAlignment="center"
                         android:theme="@style/label_content" />
+
                     <EditText
                         android:id="@+id/txt_loc"
                         android:layout_width="66dp"
                         android:layout_height="wrap_content"
                         android:background="@drawable/edit_text_shape"
-                        android:inputType="textPersonName"
                         android:text="" />
+
                     <Button
                         android:id="@+id/btn_clear"
                         style="@style/AppTheme.btn_search"
@@ -286,7 +284,6 @@
         </LinearLayout>
 
 
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -296,36 +293,41 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent">
+
                 <TextView
-                    android:theme="@style/label_content"
                     android:layout_width="60dp"
                     android:layout_height="match_parent"
                     android:layout_alignParentLeft="true"
                     android:gravity="right|center_vertical"
-                    android:text="DOC No : " />
+                    android:text="DOC No : "
+                    android:theme="@style/label_content" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="2">
+
                     <EditText
-                        android:layout_weight="1"
                         android:id="@+id/txt_doc_no"
-                        android:background="@drawable/edit_text_shape"
+
                         android:layout_width="235dp"
                         android:layout_height="wrap_content"
-                        android:inputType="textPersonName"
+                        android:layout_weight="1"
+                        android:background="@drawable/edit_text_shape"
+                        android:nextFocusForward="@+id/txt_rfid"
                         android:text="" />
+
                     <Button
-                        android:layout_weight="2"
-                        style="@style/AppTheme.btn_search"
                         android:id="@+id/btn_search_doc"
+                        style="@style/AppTheme.btn_search"
                         android:layout_width="wrap_content"
                         android:layout_height="40dp"
+                        android:layout_weight="2"
                         android:text="..." />
                 </TableRow>
             </LinearLayout>
@@ -344,35 +346,38 @@
 
 
                 <TextView
-                    android:theme="@style/label_content"
                     android:layout_width="60dp"
                     android:layout_height="match_parent"
                     android:layout_alignParentLeft="true"
                     android:gravity="right|center_vertical"
-                    android:text="Product : " />
+                    android:text="Product : "
+                    android:theme="@style/label_content" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="2">
+
                     <EditText
                         android:id="@+id/txt_product_name"
-                        android:background="@drawable/edit_text_shape"
                         android:layout_width="235dp"
-                        android:layout_weight="1"
                         android:layout_height="wrap_content"
-                        android:inputType="textPersonName"
+                        android:layout_weight="1"
+                        android:background="@drawable/edit_text_shape"
                         android:text="" />
+
                     <Button
-                        android:layout_weight="2"
-                        style="@style/AppTheme.btn_search"
                         android:id="@+id/btn_search_product"
+
+                        style="@style/AppTheme.btn_search"
                         android:layout_width="wrap_content"
                         android:layout_height="40dp"
+                        android:layout_weight="2"
                         android:text="..." />
                 </TableRow>
             </LinearLayout>
@@ -383,60 +388,63 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:paddingTop="5dp">
+
             <TextView
-                android:theme="@style/label_content"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:text="Update QTY"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:theme="@style/label_content" />
         </LinearLayout>
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:gravity="center"
+            android:orientation="horizontal"
             android:paddingTop="5dp">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent">
+
                 <TextView
-                    android:theme="@style/label_content"
                     android:layout_width="60dp"
                     android:layout_height="match_parent"
                     android:layout_alignParentLeft="true"
                     android:gravity="right|center_vertical"
                     android:text="QTY = "
-                     />
+                    android:theme="@style/label_content" />
 
                 <TextView
                     android:id="@+id/txt_qty_total"
                     android:layout_width="50dp"
                     android:layout_height="match_parent"
                     android:gravity="center"
-                    android:textColor="#000000"
                     android:text="0"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:textColor="#000000" />
+
                 <TextView
-                    android:theme="@style/label_content"
                     android:layout_width="50dp"
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:text="NEW = "
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:theme="@style/label_content" />
+
                 <EditText
-                    android:background="@drawable/edit_taxt_readonly_shape"
                     android:id="@+id/txt_qty_total_new"
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
+                    android:background="@drawable/edit_taxt_readonly_shape"
                     android:text="" />
+
                 <Button
-                    style="@style/AppTheme.btn_update"
                     android:id="@+id/btn_edit"
+                    style="@style/AppTheme.btn_update"
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
                     android:text="EDIT" />
@@ -447,28 +455,31 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:gravity="center"
+            android:orientation="horizontal"
             android:paddingTop="5dp">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent">
+
                 <Button
-                    style="@style/AppTheme.btn_insert"
                     android:id="@+id/btn_new"
+                    style="@style/AppTheme.btn_insert"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="NEW" />
+
                 <Button
-                    style="@style/AppTheme.btn_update"
                     android:id="@+id/btn_update"
+                    style="@style/AppTheme.btn_update"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="UPDATE" />
+
                 <Button
-                    style="@style/AppTheme.btn_retrun"
                     android:id="@+id/btn_retrun"
+                    style="@style/AppTheme.btn_retrun"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="RETRUN" />

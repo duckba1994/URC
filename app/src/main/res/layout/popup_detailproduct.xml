@@ -19,7 +19,7 @@
             android:id="@+id/header_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="***Detail Head IN***"
+            android:text="***Detail Product IN***"
             android:textColor="#ffffff"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -50,7 +50,7 @@
                     android:layout_height="match_parent"
                     android:layout_alignParentLeft="true"
                     android:gravity="left|center_vertical"
-                    android:text="Doc No"
+                    android:text="Product Code"
                     android:theme="@style/label_content"></TextView>
 
                 <TextView
@@ -60,7 +60,7 @@
                     android:theme="@style/label_content"></TextView>
 
                 <EditText
-                    android:id="@+id/txt_doc_no"
+                    android:id="@+id/txt_product_code"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:enabled="false"
@@ -78,7 +78,7 @@
                     android:layout_height="match_parent"
                     android:layout_alignParentLeft="true"
                     android:gravity="left|center_vertical"
-                    android:text="Date"
+                    android:text="Description"
                     android:theme="@style/label_content"></TextView>
 
                 <TextView
@@ -88,7 +88,7 @@
                     android:theme="@style/label_content"></TextView>
 
                 <EditText
-                    android:id="@+id/txt_date"
+                    android:id="@+id/txt_description"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:enabled="false"
@@ -106,7 +106,7 @@
                     android:layout_height="match_parent"
                     android:layout_alignParentLeft="true"
                     android:gravity="left|center_vertical"
-                    android:text="Remark"
+                    android:text="Unit"
                     android:theme="@style/label_content"></TextView>
 
                 <TextView
@@ -117,7 +117,7 @@
                     android:theme="@style/label_content"></TextView>
 
                 <EditText
-                    android:id="@+id/txt_remark"
+                    android:id="@+id/txt_unit"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:enabled="false"
@@ -135,7 +135,7 @@
                     android:layout_height="match_parent"
                     android:layout_alignParentLeft="true"
                     android:gravity="left|center_vertical"
-                    android:text="From W/H"
+                    android:text="Ratio"
                     android:theme="@style/label_content"></TextView>
 
                 <TextView
@@ -145,7 +145,7 @@
                     android:theme="@style/label_content"></TextView>
 
                 <EditText
-                    android:id="@+id/txt_from_WH"
+                    android:id="@+id/txt_ratio"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:enabled="false"
@@ -163,7 +163,7 @@
                     android:layout_height="match_parent"
                     android:layout_alignParentLeft="true"
                     android:gravity="left|center_vertical"
-                    android:text="Line"
+                    android:text="Location"
                     android:theme="@style/label_content"></TextView>
 
                 <TextView
@@ -173,7 +173,7 @@
                     android:theme="@style/label_content"></TextView>
 
                 <EditText
-                    android:id="@+id/txt_line"
+                    android:id="@+id/txt_location"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:enabled="false"
@@ -191,7 +191,7 @@
                     android:layout_height="match_parent"
                     android:layout_alignParentLeft="true"
                     android:gravity="left|center_vertical"
-                    android:text="Bach Date"
+                    android:text="Lot No"
                     android:theme="@style/label_content"></TextView>
 
                 <TextView
@@ -201,7 +201,7 @@
                     android:theme="@style/label_content"></TextView>
 
                 <EditText
-                    android:id="@+id/txt_bach_date"
+                    android:id="@+id/txt_lot_no"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:enabled="false"
@@ -219,7 +219,7 @@
                     android:layout_height="match_parent"
                     android:layout_alignParentLeft="true"
                     android:gravity="left|center_vertical"
-                    android:text="Total Count"
+                    android:text="Pack"
                     android:theme="@style/label_content"></TextView>
 
                 <TextView
@@ -229,7 +229,7 @@
                     android:theme="@style/label_content"></TextView>
 
                 <EditText
-                    android:id="@+id/txt_total_count"
+                    android:id="@+id/txt_pack"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:paddingTop="1dp"></EditText>
@@ -246,7 +246,7 @@
                     android:layout_height="match_parent"
                     android:layout_alignParentLeft="true"
                     android:gravity="left|center_vertical"
-                    android:text="Operation"
+                    android:text="Qty"
                     android:theme="@style/label_content"></TextView>
 
                 <TextView
@@ -256,7 +256,7 @@
                     android:theme="@style/label_content"></TextView>
 
                 <EditText
-                    android:id="@+id/txt_operation"
+                    android:id="@+id/txt_qty"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:enabled="false"
@@ -274,7 +274,7 @@
                     android:layout_height="match_parent"
                     android:layout_alignParentLeft="true"
                     android:gravity="left|center_vertical"
-                    android:text="B/C. No"
+                    android:text="Cost/Unit"
                     android:theme="@style/label_content"></TextView>
 
                 <TextView
@@ -284,13 +284,69 @@
                     android:theme="@style/label_content"></TextView>
 
                 <EditText
-                    android:id="@+id/txt_BC_no"
+                    android:id="@+id/txt_cost_unit"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:enabled="false"
                     android:paddingTop="1dp"></EditText>
             </LinearLayout>
 
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:paddingTop="5dp">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="left|center_vertical"
+                    android:text="Total Cost"
+                    android:theme="@style/label_content"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:theme="@style/label_content"></TextView>
+
+                <EditText
+                    android:id="@+id/txt_total_cost"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:enabled="false"
+                    android:paddingTop="1dp"></EditText>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:paddingTop="5dp">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="left|center_vertical"
+                    android:text="Expire"
+                    android:theme="@style/label_content"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:theme="@style/label_content"></TextView>
+
+                <EditText
+                    android:id="@+id/txt_expire"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:enabled="false"
+                    android:paddingTop="1dp"></EditText>
+            </LinearLayout>
             <RelativeLayout
                 android:id="@+id/footer"
                 android:layout_width="match_parent"
