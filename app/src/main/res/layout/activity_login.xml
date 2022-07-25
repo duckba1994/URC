@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="@color/col_gray_retrun"
+    tools:context=".ui.scanin.ScanInFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="20dp">
+
+            <ImageView
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                app:srcCompat="@android:drawable/ic_popup_disk_full"
+                tools:srcCompat="@tools:sample/avatars">
+
+            </ImageView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="20dp">
+
+            <Button
+                android:id="@+id/btn_scan_qr"
+                style="@style/AppTheme.btn_search"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="SCAN QR">
+
+            </Button>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="20dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/txt_detail_login"
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+
+            </AutoCompleteTextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="20dp">
+
+            <Button
+                android:id="@+id/btn_login"
+                style="@style/AppTheme.btn_insert"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="เข้าสู่ระบบ">
+
+            </Button>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>
