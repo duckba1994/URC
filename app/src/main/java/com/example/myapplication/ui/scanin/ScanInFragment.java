@@ -1,5 +1,6 @@
 package com.example.myapplication.ui.scanin;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.Gravity;
@@ -18,6 +19,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.myapplication.Login;
 import com.example.myapplication.R;
 import com.example.myapplication.databinding.FragmentScanInBinding;
 
@@ -38,6 +40,14 @@ public class ScanInFragment extends Fragment implements View.OnClickListener, Vi
                 new ViewModelProvider(this).get(ScaninViewModel.class);
 
         view = inflater.inflate(R.layout.fragment_scan_in, container, false);
+//        Intent intent = new Intent(this.getContext(), Login.class);
+//        intent.putExtra("yourData", "d");
+
+
+//        Intent intent1 = getIntent("2");
+//        intent1.getExtra("yourData");
+//        intent.getExtra("someKey") ...
+
 
         TextView txt_view = (TextView) view.findViewById(R.id.txt_rfid112);
         scaninViewModel.getText().observe(getViewLifecycleOwner(), txt_view::setText);

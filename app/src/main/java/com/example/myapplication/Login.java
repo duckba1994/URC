@@ -19,6 +19,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.lifecycle.LifecycleOwner;
 
+import com.example.myapplication.model.Employee;
 import com.google.common.util.concurrent.ListenableFuture;
 
 import java.util.concurrent.ExecutionException;
@@ -29,11 +30,16 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
     private PreviewView previewView;
     private ListenableFuture<ProcessCameraProvider> cameraProviderFuture;
     Button btn_scan_qr, btn_login;
+    Employee obj_employee = new Employee();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        obj_employee.setEmployee_No("1207");
+        obj_employee.setEmployee_FullName("WICHIT TEANTHONG");
+        obj_employee.setEmployee_Location("WH10");
 
         previewView = findViewById(R.id.activity_main_previewView);
         btn_scan_qr = findViewById(R.id.btn_scan_qr);
@@ -42,7 +48,6 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         btn_scan_qr.setOnClickListener(this);
         btn_login.setOnClickListener(this);
     }
-
 
 
     @Override
@@ -73,7 +78,6 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
     }
 
 
-
     @Override
     public void onClick(View view) {
         int id = view.getId();
@@ -85,11 +89,13 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
 //                Intent intents = new Intent(Login.this, MainActivity.class);
 //                startActivityForResult(intents, 0);
 
-
                 Intent intent = new Intent(this, MainActivity.class);
 //                EditText editText = (EditText) findViewById(R.id.editTextTextPersonName);
 //                String message = editText.getText().toString();
 //                intent.putExtra(EXTRA_MESSAGE, message);
+                intent.putExtra("Full_Name", obj_employee.getEmployee_FullName());
+                intent.putExtra("Location", obj_employee.getEmployee_Location());
+                intent.putExtra("Employee_No", obj_employee.getEmployee_No());
                 startActivity(intent);
                 break;
         }
