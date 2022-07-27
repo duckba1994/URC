@@ -1,14 +1,20 @@
 package com.example.myapplication;
 
+import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
 import com.google.zxing.Result;
 
 import me.dm7.barcodescanner.core.*;
+import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
 public class ScanQr extends AppCompatActivity implements ZXingScannerView.ResultHandler {
     private ZXingScannerView mScannerView;
@@ -35,8 +41,10 @@ public class ScanQr extends AppCompatActivity implements ZXingScannerView.Result
     @Override
     public void handleResult(Result rawResult) {
         // Do something with the result here
-        // Log.v("tag", rawResult.getText()); // Prints scan results
-        // Log.v("tag", rawResult.getBarcodeFormat().toString()); // Prints the scan format (qrcode, pdf417 etc.)
+//         Log.v("tag", rawResult.getText()); // Prints scan results
+//         Log.v("tag", rawResult.getBarcodeFormat().toString()); // Prints the scan format (qrcode, pdf417 etc.)
+
+
         Intent result = new Intent();
         result.putExtra("SCAN_RESULT", rawResult.getText());
         result.putExtra("SCAN_RESULT_FORMAT", rawResult.getBarcodeFormat().toString());

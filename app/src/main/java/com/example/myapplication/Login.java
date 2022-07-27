@@ -43,24 +43,26 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         btn_login.setOnClickListener(this);
     }
 
-    private void bindCameraPreview(@NonNull ProcessCameraProvider cameraProvider) {
-        previewView.setImplementationMode(PreviewView.ImplementationMode.PERFORMANCE);
-//        previewView.setVisibility(View.GONE);
-        Preview preview = new Preview.Builder()
-                .build();
 
-        CameraSelector cameraSelector = new CameraSelector.Builder()
-                .requireLensFacing(CameraSelector.LENS_FACING_BACK)
-                .build();
 
-        preview.setSurfaceProvider(previewView.getSurfaceProvider());
-        Camera camera = cameraProvider.bindToLifecycle((LifecycleOwner) this, cameraSelector, preview);
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        Intent intents = new Intent(Login.this, ScanQr.class);
 
+        if (requestCode == PERMISSION_REQUEST_CAMERA) {
+            if (grantResults.length == 1 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                startActivityForResult(intents, 0);
+            } else {
+                Toast.makeText(this, "Camera Permission Denied", Toast.LENGTH_SHORT).show();
+            }
+        }
     }
 
-    private void requestCamera() {
+    private void check_permission_camera() {
+        Intent intents = new Intent(Login.this, ScanQr.class);
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
-            startCamera();
+            startActivityForResult(intents, 0);
         } else {
             if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.CAMERA)) {
                 ActivityCompat.requestPermissions(Login.this, new String[]{Manifest.permission.CAMERA}, PERMISSION_REQUEST_CAMERA);
@@ -70,39 +72,25 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         }
     }
 
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        if (requestCode == PERMISSION_REQUEST_CAMERA) {
-            if (grantResults.length == 1 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                startCamera();
-            } else {
-                Toast.makeText(this, "Camera Permission Denied", Toast.LENGTH_SHORT).show();
-            }
-        }
-    }
 
-    private void startCamera() {
-        cameraProviderFuture.addListener(() -> {
-            try {
-                ProcessCameraProvider cameraProvider = cameraProviderFuture.get();
-                bindCameraPreview(cameraProvider);
-            } catch (ExecutionException | InterruptedException e) {
-                Toast.makeText(this, "Error starting camera " + e.getMessage(), Toast.LENGTH_SHORT).show();
-            }
-        }, ContextCompat.getMainExecutor(this));
-    }
 
     @Override
     public void onClick(View view) {
         int id = view.getId();
         switch (id) {
             case R.id.btn_scan_qr:
-                requestCamera();
+                check_permission_camera();
                 break;
             case R.id.btn_login:
-//                Intent intents = new Intent(Login.this, ScanQr.class);
+//                Intent intents = new Intent(Login.this, MainActivity.class);
 //                startActivityForResult(intents, 0);
+
+
+                Intent intent = new Intent(this, MainActivity.class);
+//                EditText editText = (EditText) findViewById(R.id.editTextTextPersonName);
+//                String message = editText.getText().toString();
+//                intent.putExtra(EXTRA_MESSAGE, message);
+                startActivity(intent);
                 break;
         }
     }
@@ -113,17 +101,10 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
 
         if (requestCode == 0) {
             if (resultCode == RESULT_OK) {
-               String barcode = intent.getStringExtra("SCAN_RESULT");
+                String barcode = intent.getStringExtra("SCAN_RESULT");
                 Toast.makeText(this, barcode, Toast.LENGTH_LONG).show();
             }
         }
     }
-//    public void onActivityResult(int requestCode, int resultCode, Intent intent) {
-//        if (requestCode == 0) {
-//            if (resultCode == RESULT_OK) {
-//                barcode = intent.getStringExtra("SCAN_RESULT");
-//                Toast.makeText(this,barcode,Toast.LENGTH_LONG).show();
-//            }
-//        }
-//    }
+
 }
